@@ -1,0 +1,22 @@
+package com.amdocs.bankaccount;
+
+public class CurrentAccount extends BankAccount {
+	static
+	{
+		System.out.println("Current account is created");
+	}
+    public CurrentAccount(double amount) {
+		super(amount);
+    }
+	public void withdraw(double amount) {
+	if(amount<=getbalance())
+	{
+		System.out.println("Rs.200 is detucted on your withdraw for current ");
+		super.withdraw(amount+200);
+		}
+		else
+		{
+			System.out.println("insufficient amount for withdraw");
+		}
+	}
+}

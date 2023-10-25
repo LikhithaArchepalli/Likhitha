@@ -1,0 +1,17 @@
+package com.amdocs.bankaccount;
+
+public class BankTester {
+	public static void main(String[] args) {
+		BankAccount B1= new BankAccount(7000);
+		B1.deposit(1000);
+		B1.checkbalance();
+		SavingAccount s1=new SavingAccount(7000);
+		s1.deposit(1000);
+		s1.checkbalance();
+		CurrentAccount c1=new CurrentAccount(3000);
+		c1.withdraw(2000);
+		c1.checkbalance();
+		s1.transfer(1000,c1);
+		c1.checkbalance();
+	    }
+}
